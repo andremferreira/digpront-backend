@@ -1,5 +1,5 @@
 # Curso de Frames Web (Backend)
- **Versão final** que implementa a API REST utilizada pelas aplicações frontend abordadas no curso.
+ **Versão final** Implementado a API REST utilizada pelas aplicações frontend.
 
 ## Organização
 A aplicação foi organizada em duas pastas: **api** e **config**.
