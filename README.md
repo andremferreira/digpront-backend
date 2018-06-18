@@ -1,5 +1,5 @@
-# Curso de Frames Web (Backend)
- **Versão final** que implementa a API REST utilizada pelas aplicações frontend abordadas no curso.
+# Digital Prontuário (Backend)
+ **Versão final** 1.0.0. Rodando em produção.
 
 ## Organização
 A aplicação foi organizada em duas pastas: **api** e **config**.
