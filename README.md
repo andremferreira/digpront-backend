@@ -13,8 +13,10 @@ Basicamente para a aplicação funcionar é necessário configurar:
 ### Api
 API REST foi implementada utilizando um módulo node chamado [node-restful](https://github.com/baugarten/node-restful).
 
-## Configuração
+## Api de envio de e-mail NodeMailer
+api/contato/contatoService.js
 
+## Configuração
 1. Instalar os módulos do node utilizando o **npm**.
 ```sh
 $ cd /app/backend
