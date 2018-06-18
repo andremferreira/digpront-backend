@@ -17,7 +17,7 @@ API REST foi implementada utilizando um módulo node chamado [node-restful](http
 
 1. Instalar os módulos do node utilizando o **npm**.
 ```sh
-$ cd app/backend
+$ cd /app/backend
 $ npm update
 ```
 
