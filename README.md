@@ -1,5 +1,5 @@
-# Curso de Frames Web (Backend)
- **Versão final** que implementa a API REST utilizada pelas aplicações frontend abordadas no curso.
+# Digital Prontuário (Backend)
+ **Versão final** Implementado pela Api rest.
 
 ## Organização
 A aplicação foi organizada em duas pastas: **api** e **config**.
@@ -17,16 +17,16 @@ API REST foi implementada utilizando um módulo node chamado [node-restful](http
 
 1. Instalar os módulos do node utilizando o **npm**.
 ```sh
-$ cd curso_frames_web/backend/versao_inicial
+$ cd /app/backend
 $ npm update
 ```
 
-2. Inicializar a aplicação em **modo desenvolvimento** (utilizado no curso).
+2. Inicializar a aplicação em **modo desenvolvimento**.
 ```sh
 $ npm run dev
 ```
 
 3. Inicializar a aplicação em **modo produção** (Fica a dica... :P).
 ```sh
-$ npm run production
+$ npm run production (pm2 - alias: backend)
 ```
