@@ -1,5 +1,5 @@
 # Curso de Frames Web (Backend)
- **Versão final** Implementado a API REST utilizada pelas aplicações frontend.
+ **Versão final** que implementa a API REST utilizada pelas aplicações frontend abordadas no curso.
 
 ## Organização
 A aplicação foi organizada em duas pastas: **api** e **config**.
@@ -13,22 +13,20 @@ Basicamente para a aplicação funcionar é necessário configurar:
 ### Api
 API REST foi implementada utilizando um módulo node chamado [node-restful](https://github.com/baugarten/node-restful).
 
-## Api de envio de e-mail NodeMailer
-api/contato/contatoService.js
-
 ## Configuração
+
 1. Instalar os módulos do node utilizando o **npm**.
 ```sh
-$ cd /app/backend
+$ cd curso_frames_web/backend/versao_inicial
 $ npm update
 ```
 
-2. Inicializar a aplicação em **modo desenvolvimento**.
+2. Inicializar a aplicação em **modo desenvolvimento** (utilizado no curso).
 ```sh
 $ npm run dev
 ```
 
-3. Inicializar a aplicação em **modo produção - PM2**.
+3. Inicializar a aplicação em **modo produção** (Fica a dica... :P).
 ```sh
 $ npm run production
 ```

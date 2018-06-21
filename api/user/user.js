@@ -42,7 +42,16 @@ const userSchema = new mongoose.Schema({
     assistente: [ assistenteSchema ],
     recoveryPass: { type: String },
     recoveryDt: { type: Date },
-    recoveryStatus: { type: Boolean }
+    recoveryStatus: { type: Boolean },
+    formacaoAcademica: { type: String, required: false },
+    posGraduacao: { type: String, required: false },
+    cursoAprimoramento: { type: String, required: false },
+    artigo: { type: String, required: false },
+    avatarPath: { type: String, required: false },
+    avisoVencimento: { type: String, required: false },
+    paginaContato: { type: String, required: false }, 
+    tituloApresentacao: { type: String, required: false },
+
 })
 
 userSchema.statics.findAndModify = function (query, sort, doc, options, callback) {

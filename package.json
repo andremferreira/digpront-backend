@@ -7,7 +7,7 @@
     "dev": "nodemon",
     "production": "pm2 start loader.js --name backend",
     "start": "node loader",
-    "stop" : "pm2 stop backend",
+    "stop": "pm2 stop backend",
     "delete": "pm2 delete all"
   },
   "author": "Andre M Ferreira",

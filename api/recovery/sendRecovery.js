@@ -1,8 +1,8 @@
 const nodemailer = require('nodemailer')
 function sendRecovery(email, recoveryPass) {
-  var dt = new Date()
-  var ho = '0'
-  var mi = '0'
+  let dt = new Date()
+  let ho = '0'
+  let mi = '0'
   if (dt.getHours() < 9){
     ho = '0'
   } else {
@@ -13,7 +13,7 @@ function sendRecovery(email, recoveryPass) {
   } else {
     mi = ''
   }
-  var strDt = dt.getDate() + '/' + dt.getMonth()+1 + '/' + dt.getFullYear() + ' às '+ ho + dt.getHours() + ':' + mi + dt.getMinutes()
+  let strDt = dt.getDate() + '/' + dt.getMonth()+1 + '/' + dt.getFullYear() + ' às '+ ho + dt.getHours() + ':' + mi + dt.getMinutes()
   const output = `
   <div style="padding-left:15px; padding-top:12px; padding-bottom:12px; border-style:solid; border: 2px solid #0097fc;">
   	<table>
