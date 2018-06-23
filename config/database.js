@@ -2,7 +2,7 @@
 //localhost
 // module.exports = mongoose.connect('mongodb://localhost/digprontdb')
 //producao local
-module.exports = mongoose.connect('mongodb://admandre:Solution0864%40@50.30.43.155:27017/digprontdb?3t.connection.name=Server4You&3t.connectTimeout=10000&3t.uriVersion=2&3t.connectionMode=direct&readPreference=primary&3t.socketTimeout=0')
+module.exports = mongoose.connect('mongodb://admandre:Solution0864@50.30.43.155/digprontdb')
 // Usando  producao externo
 //module.exports = mongoose.connect('mongodb://admandre:Hidden21@naboo.mongodb.umbler.com:35382/digprontdb')
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório."
