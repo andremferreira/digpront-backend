@@ -3,7 +3,7 @@
 const multer = require('multer');
 const path = require('path');
 
-function sendFile(req, file, cb) {
+function sendFile(req, res, next) {
     // Set Storage Engine
     var storage = multer.diskStorage({
         destination: './public/avatar',
