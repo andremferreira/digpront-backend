@@ -1,6 +1,7 @@
 const express = require('express')
 const auth = require('./auth')
 
+
 module.exports = function (server) {
 
     /*
@@ -10,6 +11,7 @@ module.exports = function (server) {
     server.use('/oapi', openApi)
 
     const AuthService = require('../api/user/authService')
+    const SendFile = require('../api/uploadFile/sendFile')
 
     openApi.post('/login', AuthService.login)
     openApi.post('/loginAssist', AuthService.loginAssist)
@@ -17,6 +19,7 @@ module.exports = function (server) {
     openApi.post('/signup', AuthService.signup)
     openApi.post('/validateToken', AuthService.validateToken)
     openApi.post('/changeRecoveryPass', AuthService.changeRecoveryPass)
+    openApi.post('/sendImage', SendFile.sendFile)
 
     /*
      * Rotas protegidas por Token JWT
