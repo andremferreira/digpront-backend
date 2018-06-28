@@ -12,6 +12,7 @@ module.exports = function (server) {
 
     const AuthService = require('../api/user/authService')
     const SendFile = require('../api/uploadFile/sendFile')
+    const CepService = require('../api/cep/cepService')
 
     openApi.post('/login', AuthService.login)
     openApi.post('/loginAssist', AuthService.loginAssist)
@@ -20,6 +21,7 @@ module.exports = function (server) {
     openApi.post('/validateToken', AuthService.validateToken)
     openApi.post('/changeRecoveryPass', AuthService.changeRecoveryPass)
     openApi.post('/sendImage', SendFile.sendFile)
+    CepService.register(openApi, '/ceps')
 
     /*
      * Rotas protegidas por Token JWT
