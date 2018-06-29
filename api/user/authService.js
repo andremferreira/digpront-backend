@@ -158,7 +158,7 @@ const recoveryPass = (req, res, next) => {
             Recovery.sendRecovery(email, recoverP)
             return res.status(200).send(['O acesso para modificação de senha, foi encaminhada para o e-mail cadastrado.'])
         } else {
-            return res.status(400).send({ errors: ['Usário não cadastrado.'] })
+            return res.status(400).send({ errors: ['Usuário não cadastrado.'] })
         }
     })
 }
