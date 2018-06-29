@@ -136,7 +136,7 @@ const changeRecoveryPass = (req, res, next) => {
                                   } else if (user) {
                                       return res.status(200).send(['Senha alterada com sucesso!'])
                                   } else {
-                                      return res.status(400).send({ errors: ['Solicitacao ainda não encontrada ou inexistente.'] })
+                                      return res.status(400).send({ errors: ['Solicitação não encontrada ou inexistente.'] })
                                   }
                               })
         }
@@ -156,9 +156,9 @@ const recoveryPass = (req, res, next) => {
             return sendErrorsFromDB(res, err)
         } else if (user){
             Recovery.sendRecovery(email, recoverP)
-            return res.status(200).send(['O acesso da página de modificação de senha, foi encaminhada para seu e-mail.'])
+            return res.status(200).send(['O acesso para modificação de senha, foi encaminhada para o e-mail cadastrado.'])
         } else {
-            return res.status(400).send({ errors: ['Usário não encontrado.'] })
+            return res.status(400).send({ errors: ['Usário não cadastrado.'] })
         }
     })
 }
@@ -177,13 +177,13 @@ const signup = (req, res, next) => {
 
 
     if (!email.match(emailRegex)) {
-        return res.status(400).send({ errors: ['O e-mail informado está inválido'] })
+        return res.status(400).send({ errors: ['O e-mail informado é inválido'] })
     }
 
     if (!password.match(passwordRegex)) {
         return res.status(400).send({
             errors: [
-                "Senha precisar ter: uma letra maiúscula, uma letra minúscula, um número, uma caractere especial(@#$%) e tamanho entre 6-12."
+                "Senha precisar conter: uma letra maiúscula, uma letra minúscula, um número, uma caractere especial(@#$%) e tamanho entre 6-12."
             ]
         })
     }
