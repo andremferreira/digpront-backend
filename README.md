@@ -2,7 +2,7 @@
  **Versão final** Implementado pela Api rest.
 
 ## Organização
-A aplicação foi organizada em duas pastas: **api** e **config**..
+A aplicação foi organizada em duas pastas: **api** e **config**.
 
 ### Config
 Basicamente para a aplicação funcionar é necessário configurar:
