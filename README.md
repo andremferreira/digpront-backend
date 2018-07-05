@@ -3,7 +3,7 @@
 
 ## Organização
 A aplicação foi organizada em duas pastas: **api** e **config**.
-
+-- TESTE ANDRE
 ### Config
 Basicamente para a aplicação funcionar é necessário configurar:
 - Servidor HTTP (Express)
