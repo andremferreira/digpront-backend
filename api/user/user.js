@@ -1,12 +1,6 @@
 const restful = require('node-restful')
 const mongoose = restful.mongoose
 const limite = new Date(Date.now() + (30 * 24 * 60 * 60 * 1000));
-
-/*
-    CAMPOS OBRIGATÓRIOS PARA CADASTRO INICIAL:
-    nome, sobrenome, email, crm, celular, cep, password
-*/
-
 const assistenteSchema = new mongoose.Schema({
     nomeAssist: { type: String, uppercase: true },
     sobrenomeAssist: { type: String, required: false, uppercase: true , trim: true },
@@ -15,7 +9,6 @@ const assistenteSchema = new mongoose.Schema({
   })
 
 const userSchema = new mongoose.Schema({
-
     nome: { type: String, required: true, uppercase: true },
     sobrenome: { type: String, required: false, uppercase: true , trim: true},
     email: { type: String, required: true , lowercase: true, unique: true },
@@ -24,6 +17,7 @@ const userSchema = new mongoose.Schema({
     celular: { type: String, required: true, min: 10, max: 15 },
     genero: { type: Boolean, required: false },
     endereco: { type: String, required: false },
+    dataNascimento: { type: Date, required: true },
     /*
         Tipos de usuários:
                             1 - Admin

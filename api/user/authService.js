@@ -145,7 +145,6 @@ const changeRecoveryPass = (req, res, next) => {
 const recoveryPass = (req, res, next) => {
     const email = req.body.email || ''
     const crm = req.body.crm || ''
-    // const dt2 = new Date(Date.now())
     const dt = new Date(Date.now() + (60 * 1000)) // * 60 * 1.389 UMA HORA DE LIBERACAO
     const recoverP = Encrypt.toEncrypt(email + dt)
     User.findOneAndUpdate(
@@ -173,7 +172,21 @@ const signup = (req, res, next) => {
     const crm = req.body.crm || ''
     const cep = req.body.cep || ''
     const celular = req.body.celular || ''
-    const medicoid = req.body.medicoid || ''
+    // const medicoid = req.body.medicoid || ''
+    const datNascimento = req.body.datNascimento || ''
+    const tituloApresentacao = req.body.tituloApresentacao || ''
+    const cidade = req.body.cidade || ''
+    const estado = req.body.estado || ''
+    const bairro = req.body.bairro || ''
+    const endereco = req.body.endereco || ''
+    const formacaoAcademica = req.body.formacaoAcademica || ''
+    const posGraduacao = req.body.posGraduacao || ''
+    const cursoAprimoramento = req.body.cursoAprimoramento || ''
+    const artigo = req.body.artigo || ''
+    const avatarPath = req.body.avatarPath || ''
+    const avisoVencimento = req.body.avisoVencimento || ''
+    const paginaContato = req.body.paginaContato || ''
+
 
 
     if (!email.match(emailRegex)) {
@@ -201,7 +214,26 @@ const signup = (req, res, next) => {
         } else if (user) {
             return res.status(400).send({ errors: ['Usuário já cadastrado.'] })
         } else {
-            const newUser = new User({ nome, sobrenome, email, password: passwordHash, crm, cep, celular })
+            const newUser = new User({ nome, 
+                                       sobrenome, 
+                                       email, 
+                                       password: passwordHash, 
+                                       crm, 
+                                       cep,
+                                       cidade,
+                                       estado,
+                                       bairro,
+                                       endereco, 
+                                       celular, 
+                                       datNascimento, 
+                                       tituloApresentacao,
+                                       formacaoAcademica,
+                                       posGraduacao,
+                                       cursoAprimoramento,
+                                       artigo,
+                                       avatarPath,
+                                       avisoVencimento,
+                                       paginaContato })
             newUser.save(err => {
                 if (err) {
                     // console.log(`erro 2 ${err}`)

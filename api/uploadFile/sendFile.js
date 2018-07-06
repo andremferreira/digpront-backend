@@ -20,7 +20,8 @@ function sendFile(req, res, next) {
             })
         }res.json({
             success: true,
-            message:'Image uploaded!'
+            message:'Image uploaded!',
+            archivePath: `./public/avatar/${req.file.filename}`
        })
     })
 };
