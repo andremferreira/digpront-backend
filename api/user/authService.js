@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+const _ = require('lodash')
 const bcrypt = require('bcrypt')
 const Encrypt = require('../encrypt/encrypt')
 const User = require('./user')
