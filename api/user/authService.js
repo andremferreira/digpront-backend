@@ -164,6 +164,7 @@ const recoveryPass = (req, res, next) => {
 }
 
 const signup = (req, res, next) => {
+    console.log(req)
     // Campos obrigatórios: nome, sobrenome, email, crm, celular, cep, password
     const nome = req.body.nome || ''
     const sobrenome = req.body.sobrenome || ''
@@ -174,7 +175,7 @@ const signup = (req, res, next) => {
     const cep = req.body.cep || ''
     const celular = req.body.celular || ''
     // const medicoid = req.body.medicoid || ''
-    const datNascimento = req.body.datNascimento || ''
+    const dataNascimento = req.body.datNascimento || ''
     const tituloApresentacao = req.body.tituloApresentacao || ''
     const cidade = req.body.cidade || ''
     const estado = req.body.estado || ''
@@ -226,7 +227,7 @@ const signup = (req, res, next) => {
                                        bairro,
                                        endereco, 
                                        celular, 
-                                       datNascimento, 
+                                       dataNascimento, 
                                        tituloApresentacao,
                                        formacaoAcademica,
                                        posGraduacao,
