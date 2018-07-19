@@ -114,7 +114,7 @@ const changeRecoveryPass = (req, res, next) => {
     const salt = bcrypt.genSaltSync()
     const password = req.body.pass || ''
     const confirmPassword = req.body.confPass || ''
-    const passwordHash = bcrypt.hashSync(password, salt)
+    const passwordHash = bcrypt.hashSync(password, salt),
     const recoveryStatus = req.body.recoveryStatus || ''
     const recoveryDate = req.body.recoveryDt || ''
     const recoveryPass = req.body.recoveryPass || ''
@@ -170,7 +170,7 @@ const signup = (req, res, next) => {
     const sobrenome = req.body.sobrenome || ''
     const email = req.body.email || ''
     const password = req.body.password || ''
-    const confirmPassword = req.body.confirm_password || ''
+    const confirmPassword = req.body.confPass || ''
     const crm = req.body.crm || ''
     const cep = req.body.cep || ''
     const celular = req.body.celular || ''
@@ -188,8 +188,6 @@ const signup = (req, res, next) => {
     const avatarPath = req.body.avatarPath || ''
     const avisoVencimento = req.body.avisoVencimento || ''
     const paginaContato = req.body.paginaContato || ''
-
-
 
     if (!email.match(emailRegex)) {
         return res.status(400).send({ errors: ['O e-mail informado é inválido'] })
