@@ -120,8 +120,7 @@ const changeRecoveryPass = (req, res, next) => {
     const recoveryPass = req.body.recoveryPass || ''
 
     if (!bcrypt.compareSync(confirmPassword, passwordHash)) {
-        console.log(confirmPassword, passwordHash, bcrypt.compareSync(confirmPassword, passwordHash))
-        return res.status(400).send({ errors: [`Senhas não conferem. confirm:${confirmPassword}, passhash:${passwordHash}, comparação:${bcrypt.compareSync(confirmPassword, passwordHash)}`] })
+        return res.status(400).send({ errors: ['Senhas não conferem.']})
     } else if (!password.match(passwordRegex)) {
         return res.status(400).send({
             errors: [
