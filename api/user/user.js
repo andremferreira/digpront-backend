@@ -43,7 +43,7 @@ const userSchema = new mongoose.Schema({
     artigo: { type: String, required: false },
     avatarPath: { type: String, required: false },
     avisoVencimento: { type: String, required: false },
-    paginaContato: { type: String, required: false }, 
+    paginaContato: { type: String, required: true , unique:true }, 
     tituloApresentacao: { type: String, required: false },
 
 })
