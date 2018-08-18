@@ -21,6 +21,7 @@ module.exports = function (server) {
     openApi.post('/validateToken', AuthService.validateToken)
     openApi.post('/changeRecoveryPass', AuthService.changeRecoveryPass)
     openApi.post('/sendImage', SendFile.sendFile)
+    /*openApi.get('/ceps', CepService)*/
     CepService.register(openApi, '/ceps')
 
     /*
