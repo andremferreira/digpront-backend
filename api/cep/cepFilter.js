@@ -2,7 +2,7 @@ const _ = require('lodash')
 const Cep = require('./cep')
 
 function getCep(req, res, next) {
-    /*console.log(req.params.codCep)*/
+    console.log(req)
     Cep.find( 
         { codCep : req.params.codCep }, function(error, value) {
         if(error) {
