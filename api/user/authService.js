@@ -114,7 +114,7 @@ const changeRecoveryPass = (req, res, next) => {
     const salt = bcrypt.genSaltSync()
     const password = req.body.pass || ''
     const confirmPassword = req.body.confPass || ''
-    const passwordHash = bcrypt.hashSync(password, salt),
+    const passwordHash = bcrypt.hashSync(password, salt)
     const recoveryStatus = req.body.recoveryStatus || ''
     const recoveryDate = req.body.recoveryDt || ''
     const recoveryPass = req.body.recoveryPass || ''
