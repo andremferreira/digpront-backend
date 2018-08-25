@@ -1,6 +1,5 @@
 const restful = require('node-restful')
 const mongoose = restful.mongoose
-const ObjectId = mongoose.Schema.Types.ObjectId
 
 const produtoSchema = new mongoose.Schema({
     nome: { type: String },

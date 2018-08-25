@@ -13,6 +13,7 @@ module.exports = function (server) {
     const AuthService = require('../api/user/authService')
     const SendFile = require('../api/uploadFile/sendFile')
     const Cep = require('../api/cep/cepFilter')
+    const Profissao = require('../api/profissao/profissaoFilter')
 
     openApi.post('/login', AuthService.login)
     openApi.post('/loginAssist', AuthService.loginAssist)
@@ -23,6 +24,7 @@ module.exports = function (server) {
     openApi.post('/sendImage', SendFile.sendFile)
     openApi.route('/ceps/:codCep').get(Cep.getCep)
     openApi.get('/slgUf', Cep.getSlgUf)
+    openApi.get('/profissoes', Profissao.getProfissoes)
 
     /*
      * Rotas protegidas por Token JWT
