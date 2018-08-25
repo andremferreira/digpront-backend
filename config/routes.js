@@ -22,6 +22,7 @@ module.exports = function (server) {
     openApi.post('/changeRecoveryPass', AuthService.changeRecoveryPass)
     openApi.post('/sendImage', SendFile.sendFile)
     openApi.route('/ceps/:codCep').get(Cep.getCep)
+    openApi.get('/slgUf', Cep.getSlgUf)
 
     /*
      * Rotas protegidas por Token JWT

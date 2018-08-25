@@ -30,3 +30,15 @@ $ npm run dev
 ```sh
 $ npm run production (pm2 - alias: backend)
 ```
+
+## Rotas Abertas
+
+1. Retorna a sigla dos estados
+http://localhost:3000/oapi/slgUf
+
+2. Retorna dados do cep se existir 
+http://localhost:3000/oapi/ceps/02925-160
+
+3. Carrega uma imagem para utilização como avatar (Body[Key:avatar,Value:andre.png]) para pasta ./public/avatar
+http://localhost:3000/oapi/sendImage
+
